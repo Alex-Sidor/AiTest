@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/alex/Documents/coding/aiTest/build",
-  "command": "/usr/bin/cc -DSB_CONFIG_UNITY -I/home/alex/Documents/coding/aiTest/build/_deps/sheenbidi-src/Headers -I/home/alex/Documents/coding/aiTest/build/_deps/sheenbidi-src/Source -o _deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o -c /home/alex/Documents/coding/aiTest/build/_deps/sheenbidi-src/Source/SheenBidi.c",
-  "file": "/home/alex/Documents/coding/aiTest/build/_deps/sheenbidi-src/Source/SheenBidi.c",
-  "output": "/home/alex/Documents/coding/aiTest/build/_deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o"
-}
-]
