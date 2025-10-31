@@ -5,9 +5,6 @@ compile with `cmake --build build`
 
 run with `./build/AiTest (.exe)`
 
-<video controls>
-  <source src="assets/trainingFootage.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Training Footage](assets/trainingFootage.gif)
 
 ![TrainingGraph](assets/image.png)
