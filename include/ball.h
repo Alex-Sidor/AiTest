@@ -29,7 +29,7 @@ public:
 
     sf::CircleShape circle;
     
-    network brain = network(4,2,1,2);
+    network brain = network(6,2,3,3);
 private:
     void physics(float x1, float y1);
 

@@ -20,13 +20,13 @@ network::network(int input, int output, int hidden, int hiddenDensity){
     networkBiases = new float[totalBiases];
     neuronCalculatedValues = new float[totalBiases];
     
-    /*for(int i = 0; i < totalBiases; i++){
+    for(int i = 0; i < totalBiases; i++){
         networkBiases[i] = Random::GetFloat(-1.0f, 1.0f);
     }
 
     for(int i = 0; i < (totalWeights); i++){
         networkWeights[i] = Random::GetFloat(-1.0f, 1.0f);
-    }*/
+    }
 }
 
 void network::setInputs(int select, float value){
@@ -38,7 +38,7 @@ float* network::returnOutputs(){
 }
 
 void network::addBiasAndActivation(int neuronIndex,bool isOutput){
-    neuronCalculatedValues[neuronIndex] += networkBiases[neuronIndex];
+    //neuronCalculatedValues[neuronIndex] += networkBiases[neuronIndex];
 
     if(isOutput){
         neuronCalculatedValues[neuronIndex] = std::tanh(neuronCalculatedValues[neuronIndex]);

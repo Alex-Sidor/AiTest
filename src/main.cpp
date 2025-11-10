@@ -15,7 +15,7 @@
 
 #include "ball.h"
 
-const int populationCount = 100;
+const int populationCount = 1000;
 ball population[populationCount];
 
 void copyWeightsAndBiasesFrom(const ball& other,const ball& recieving,int totalWeights, int totalBiases) {
@@ -84,7 +84,7 @@ int main()
 
         window.clear();
 
-        if(trainFrameCount == 500){
+        if(trainFrameCount == 8000){
             int indices[populationCount];
             for (int i = 0; i < populationCount; i++)
                 indices[i] = i;
@@ -93,7 +93,7 @@ int main()
                 return population[a].fitness < population[b].fitness;
             });
 
-            const int staying = populationCount / 4;
+            const int staying = populationCount / 3;
 
             for (int i = staying; i < populationCount; i++) {
                 int parentIdx = indices[Random::GetInt(0, staying)];
@@ -127,7 +127,7 @@ int main()
             }
             trainFrameCount++; 
 
-            if(trainFrameCount == 250){
+            if(trainFrameCount%500 == 0){
                 tx = Random::GetFloat(-100.0f, 100.0f);
                 ty = Random::GetFloat(-100.0f, 100.0f);
                 

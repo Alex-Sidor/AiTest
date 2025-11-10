@@ -1,4 +1,6 @@
-clone `https://github.com/SFML/SFML` into /deps
+using the `--recursive` tag, clone this repo
+
+if you already cloned and didn't recursively do `git submodule update --init --recursive`
 
 build with `cmake -B build -G "GENERATOR"`
 compile with `cmake --build build`

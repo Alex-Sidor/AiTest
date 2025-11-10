@@ -2,7 +2,7 @@
 
 ball::ball(){
     circle.setRadius(5.0f);
-    circle.setFillColor(sf::Color(255, 255, 255, 20));
+    circle.setFillColor(sf::Color(255, 255, 255, 5));
 }
 
 void ball::setTarget(float tx, float ty){
@@ -30,8 +30,8 @@ void ball::reset(float tx, float ty){
 }
 
 void ball::mutate(){
-    brain.mutateWeights(0.01f,0.1f);
-    brain.mutateBiases(0.01f,0.1f);
+    brain.mutateWeights(0.3f,0.3f);
+    brain.mutateBiases(0.01f,0.01f);
 }
 
 void ball::update(){
@@ -39,6 +39,8 @@ void ball::update(){
     brain.setInputs(1,y);
     brain.setInputs(2,tx);
     brain.setInputs(3,ty);
+    brain.setInputs(2,vx);
+    brain.setInputs(3,vy);
 
     brain.calculate();
 
@@ -56,8 +58,8 @@ void ball::update(){
 
 void ball::physics(float x1, float y1){
 
-    vx = x1;
-    vy = y1;
+    vx = sin(x1*8.0f)*y1;
+    vy = cos(x1*8.0f)*y1;
 
     x += vx;
     y += vy;
